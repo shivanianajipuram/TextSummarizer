@@ -152,3 +152,6 @@ Note - We can Expect that the output is summarized and cannot predict the output
 ```bash
 https://textsummarizer-tlagfdashspffda3efkejm.streamlit.app/
 ```
+
+## The streamlit page looks like this-
+<img width="1366" height="674" alt="image" src="https://github.com/user-attachments/assets/f28ec341-6769-4230-98f1-e62dff6357e0" />
