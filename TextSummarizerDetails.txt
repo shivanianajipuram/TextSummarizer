@@ -1,0 +1,96 @@
+# AI Text Summarization Web App
+
+
+## Project Structure
+
+AITextSummarizer/
+│
+├── app.py
+├── requirements.txt
+├── runtime.txt
+└── README.md
+Code- app.py
+import streamlit as st
+from transformers import pipeline
+
+st.set_page_config(
+    page_title="Text Summarizer",
+    page_icon="📝"
+)
+
+# Load model only once
+@st.cache_resource
+def load_model():
+    return pipeline(
+        "summarization",
+        model="t5-small",
+        tokenizer="t5-small"
+    )
+
+summarizer = load_model()
+
+st.title("📝 Text Summarization using Transformer")
+st.write("Paste long text and generate summary using T5 model")
+
+text = st.text_area(
+    "Enter Text:",
+    height=250
+)
+
+if st.button("Summarize"):
+
+    if not text.strip():
+        st.warning("Please enter some text")
+
+    else:
+        with st.spinner("Generating summary..."):
+
+            result = summarizer(
+                "summarize: " + text,
+                max_length=120,
+                min_length=30,
+                do_sample=False
+            )
+
+            st.subheader("Summary")
+            st.success(result[0]["summary_text"])
+
+
+## How to Run Locally
+
+Clone the repository
+
+
+git clone https://github.com/your-username/AITextSummarizer.git
+
+
+Open the project folder
+
+cd TextSummarizer
+
+
+Install dependencies
+
+pip install -r requirements.txt
+
+Run the application
+
+streamlit run app.py
+
+INPUTS-
+## Inputs
+
+1.Artificial Intelligence is a branch of computer science that enables machines to perform tasks that normally require human intelligence. These tasks include learning from data, understanding language, recognizing images, and making decisions. AI is widely used in healthcare, education, finance, and transportation. It helps automate work, improve accuracy, and save time in many industries.
+
+2.Climate change refers to long-term changes in global temperature and weather patterns. Human activities such as burning fossil fuels and deforestation increase greenhouse gases in the atmosphere. This leads to rising temperatures, melting glaciers, and extreme weather events. Climate change affects agriculture, wildlife, and human health around the world.
+
+
+3.Online education allows students to learn through the internet without being physically present in classrooms. It became more common during the COVID-19 pandemic. Students can attend live classes, watch recorded videos, and complete assignments online. It offers flexibility and easy access to learning resources, but it may also create challenges like internet connectivity issues and reduced face-to-face interaction.
+
+4.Space exploration is the study of outer space using satellites, spacecraft, and telescopes. Scientists explore planets, stars, and galaxies to understand the universe better. Missions to the Moon and Mars have helped collect valuable scientific information. Space exploration also supports communication systems and weather forecasting on Earth.
+Natural Language Processing is a field of Artificial Intelligence that helps computers understand and process human language. It is used in chatbots, translators, voice assistants, and text summarization systems. NLP combines computer science and linguistics to analyze text and speech. It improves communication between humans and machines.
+
+Note - We can Expect that the output is summarized and cannot predict the output as we use pre-trained model(t5 transformer)
+## Live Demo
+
+https://your-streamlit-link.com/
