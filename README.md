@@ -16,87 +16,78 @@ The model is pre-trained on large text datasets and generates summaries by under
 
 ## NLP Techniques Used
 
--Text Tokenization
+- Text Tokenization
 
--Transformer-based Summarization
+- Transformer-based Summarization
 
--Attention Mechanism
+- Attention Mechanism
 
--Context Understanding
+- Context Understanding
 
--Sequence-to-Sequence Text Generation
+- Sequence-to-Sequence Text Generation
 
--Abstractive Text Summarization
+- Abstractive Text Summarization
 
 ## Tech Stack
 
 ### Frontend
 
--Streamlit
+- Streamlit
 
 ### Backend / Machine Learning
 
--Python
+- Python
 
--Transformers
+- Transformers
 
--PyTorch
+- PyTorch
 
-NLP Processing
+- NLP Processing
 
 ## Libraries Used
 
--Streamlit
+- Streamlit
 
--Transformers
+- Transformers
 
--Torch
+- Torch
 
--SentencePiece
+- SentencePiece
 
 
 ## Machine Learning / NLP Model
 
-T5-small Transformer
+- T5-small Transformer
 
-## Tools & Platforms
-
-VS Code
-
-Git
-
-GitHub
-
-Streamlit Cloud
 
 ## Project Structure
-
+```bash
 AITextSummarizer/
 │
 ├── app.py
 ├── requirements.txt
 ├── runtime.txt
 └── README.md
-
+```
 ## Features
 
-Summarizes long paragraphs into concise text
+- Summarizes long paragraphs into concise text
 
-Real-time text summarization
+- Real-time text summarization
 
-Transformer-based NLP processing
+- Transformer-based NLP processing
 
-Context-aware summary generation
+- Context-aware summary generation
 
-Interactive Streamlit dashboard
+- Interactive Streamlit dashboard
 
-Abstractive summarization model
+- Abstractive summarization model
 
-Fast and user-friendly interface
+- Fast and user-friendly interface
 
-Text-to-text generation pipeline
+- Text-to-text generation pipeline
 
-AI-powered summarization system
+- AI-powered summarization system
 
 ## How to Run Locally
 
@@ -126,22 +117,21 @@ streamlit run app.py
 
 ## Technologies Used
 
-Python
+- Python
 
-Streamlit
+- Streamlit
 
-Transformers
+- Transformers
 
-PyTorch
+- PyTorch
 
-SentencePiece
+- SentencePiece
 
-NumPy
+- T5-small Transformer
 
-T5-small Transformer
-
-Natural Language Processing
+- Natural Language Processing
 
 ## Live Demo
-
-https://your-streamlit-link.com/
+```bash
+https://textsummarizer-tlagfdashspffda3efkejm.streamlit.app/
+```
